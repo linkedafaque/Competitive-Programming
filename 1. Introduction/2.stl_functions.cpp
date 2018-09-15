@@ -51,5 +51,8 @@ int main() {
 	//Gives index of just next higher number
 	cout << upper_bound(arr,arr+6,3) - arr << endl;
 
+	int bcd[2] = { 1, 2 };
+	cout << bcd << " " << &bcd << endl; 
+
 	return 0;
 }
