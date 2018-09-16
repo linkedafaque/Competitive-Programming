@@ -40,7 +40,6 @@ void removeConsecutiveDuplicates(char *input) {
   return;
 }
 
-
 int main() {
 	return 0;
 }
