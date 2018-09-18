@@ -19,12 +19,11 @@ int partition(int arr[], int si, int ei) {
 	int low = si - 1;
 
 	for(int j = si; j <= ei; j++) {
-		if(arr[j] < pivot) {
+		if(arr[j] <= pivot) {
 			low++;
 			swap(&arr[low], &arr[j]);
 		}
 	}
-	swap(&arr[++low], &arr[ei]);
 	return low;
 }
 
