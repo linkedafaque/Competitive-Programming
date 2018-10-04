@@ -8,6 +8,7 @@
 #define ll long long int
 using namespace std;
 
+//O(n)
 ll merge(ll arr[], ll si, ll mid, ll ei) {
 	ll i = si, j = mid + 1, count = 0, k = 0, temp[ei - si + 1];
 
@@ -35,6 +36,7 @@ ll merge(ll arr[], ll si, ll mid, ll ei) {
 	return count;
 }
 
+//O(nlogn)
 ll inversions_helper(ll arr[], ll si, ll ei) {
 	if(si >= ei) {
 		return 0;
@@ -50,6 +52,7 @@ ll inversions(ll arr[], ll n) {
 	return inversions_helper(arr, 0, n - 1);
 } 
 
+//O(nlogn)
 int main() {
 	ll n, arr[100000];
 	cin >> n;
