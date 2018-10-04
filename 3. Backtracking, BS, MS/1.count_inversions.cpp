@@ -9,18 +9,15 @@
 using namespace std;
 
 ll merge(ll arr[], ll si, ll mid, ll ei) {
-	int i = si, j = mid + 1, count = 0, k = si, temp[ei - si + 1];
+	ll i = si, j = mid + 1, count = 0, k = 0, temp[ei - si + 1];
 
 	while(i <= mid && j <= ei) {
-		if(arr[i] < arr[j]) {
-			temp[k++] = arr[i++];
+		if(arr[i] <= arr[j]) {
+		  temp[k++] = arr[i++];
 		}
 		else if(arr[i] > arr[j]) {
-			count += (mid - i + 1);
-			temp[k++] = arr[j++];
-		}
-		else {
-			i++; j++;
+		  count += (mid - i + 1);
+		  temp[k++] = arr[j++];
 		}
 	}
 
@@ -32,10 +29,9 @@ ll merge(ll arr[], ll si, ll mid, ll ei) {
 		temp[k++] = arr[j++];
 	}
 
-	for(int p = 0 ; i < k; i++) {
+	for(ll p = 0 ; p < k; p++) {
 		arr[si++] = temp[p];
 	}
-
 	return count;
 }
 
