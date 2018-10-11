@@ -58,8 +58,7 @@ void ratInAMaze(int maze[][20], int n) {
 	ratInAMazeHelper(maze, n, soln, 0, 0);
 }
 
-int main() 
-{
+int main() {
 	int n, maze[10000][20];
 	cin >> n;
 
