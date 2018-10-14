@@ -37,13 +37,20 @@ Triplet extended_euclid(int a, int b) {
 	return ans;
 }
 
+Triplet modInverse(int a, int m) {
+	Triplet ans = extended_euclid(a, m);
+	return ans;
+}
+
 int main() {
 	int a, b, tc;
 	cin >> tc;
 
 	while(tc--) {
 		cin >> a >> b;
-		Triplet ans = extended_euclid(a, b);
-		cout << "gcd: " << ans.gcd << " x: " << ans.x << " y: " << ans.y << endl;
+		Triplet ans1 = extended_euclid(a, b);
+		Triplet ans2 = modInverse(a, b);
+		cout << "gcd: " << ans1.gcd << " x: " << ans1.x << " y: " << ans1.y << endl;
+		cout << "gcd: " << ans2.gcd << " x: " << ans2.x << " y: " << ans2.y << endl;
 	}
 }
