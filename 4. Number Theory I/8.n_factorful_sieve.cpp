@@ -35,7 +35,9 @@ using namespace std;
 
 //Have to run loop till n here, because, if we run till sqrt(n), it will cancel cover the
 //numbers that its pair has to cover, eg: for 15, 3 will cover 15 once, but it also has to
-//be covered by 5 to make it have 2 prime factors hence the loop has to atleast run till n/2 
+//be covered by 5 to make it have 2 prime factors hence the loop has to atleast run till n/2
+
+//There will be 1 factor > sqrt(n) 
 
 void precomute_sieve(ll *arr, ll n) {
 	arr[0] = -1;
