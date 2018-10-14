@@ -20,7 +20,6 @@ public:
 };
 
 Triplet extended_euclid(int a, int b) {
-
 	Triplet ans;
 	if(b == 0) {
 		ans.gcd = a;
